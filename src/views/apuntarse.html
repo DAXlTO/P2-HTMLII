@@ -1,37 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="../assets/styles/apuntarse.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="../assets/styles/views.scss"><!-- do not remove this line! -->
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
     <title>Inscripción</title>
   </head>
   <body>
-    <include src="src/views/menu.html"></include>
+    <include src="src/views/menu.html" locals='{ "chefs": "", "blog": "", "apuntate": "current" }'></include>
     <main>
         <div class="formulario">
+            <h1>Inscríbite en el concurso</h1>
             <form netlify>
-                <div>
+                <div class="form-group">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" required placeholder="Introduce tu nombre">
+                    <input type="text" name="name" id="name" class="form-control" required placeholder="Introduce tu nombre">
                 </div>
                 <div>
                     <label for="email">Correo electrónico</label>
-                    <input type="email" name="email" id="email" required placeholder="Introduce tu email">
+                    <input type="email" name="email" id="email" class="form-control" required placeholder="Introduce tu email">
                 </div>
                 <div>
                     <label for="plato">Plato cocinado</label>
-                    <input type="text" name="plato" id="plato" required placeholder="Introduce tu plato a cocinar">
+                    <input type="text" name="plato" id="plato" class="form-control" required placeholder="Introduce tu plato a cocinar">
                 </div>
                 <div>
-                    <p class="info-legal">INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <b>Vital360</b>. <b>Finalidades</b>: recogida de datos para el envío del boletín electrónico. <b>Legitimación</b>: consentimiento del interesado. <b>Destinatarios:</b> no están previstas cesiones de datos a terceros, excepto obligación legal.</p>
+                    <p class="info-legal">INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <b>Concurso de cocina</b>. <b>Finalidades</b>: recogida de datos para el envío del boletín electrónico para la asignatura HTMLII. <b>Legitimación</b>: consentimiento del interesado. <b>Destinatarios:</b> no están previstas cesiones de datos a terceros, excepto obligación legal.</p>
                     <input type="checkbox" name="politica" id="politica" required>
                     <label for="politica">He leído y acepto la política de privacidad</label>
                 </div>
                 <div>
-                    <button type="submit" class="button">Inscribirme!</button>
+                    <button type="submit" class="btn btn-primary">Inscribirme!</button>
                 </div>
             </form>
         </div>

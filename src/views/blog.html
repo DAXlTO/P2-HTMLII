@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="../assets/styles/blog.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" href="../assets/styles/views.scss"><!-- do not remove this line! -->
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
     <title>Chefs ganadores</title>
   </head>
   <body>
-    <include src="src/views/menu.html"></include>
+    <include src="src/views/menu.html" locals='{ "chefs": "", "blog": "current", "apuntate": "" }'></include>
     <main>
         <div class="hero-image">
             <div class="hero-image___container">
@@ -25,10 +25,12 @@
             <div class="introduction">
                 <div class="introduction___container">
                     <div class="introduction___container--text-intro">
-                        <h1>Verduras, hidratos de carbono y proteínas son partes imprescindibles de un plato equilibrado</h1>
+                        <h1>
+                            Verduras, hidratos de carbono y proteínas son partes imprescindibles de un plato equilibrado
+                        <h1>
                     </div>
                     <div class="introduction___container--description">
-                        <p>Las verduras, los hidratos de carbono y las proteínas son elementos esenciales que convergen para crear la armonía en un plato perfecto. Las verduras, ricas en vitaminas, minerales y fibra, aportan frescura, color y vitalidad, además de contribuir a una digestión saludable. Los hidratos de carbono, como el arroz, la pasta o las patatas, son la fuente principal de energía, brindando esa sensación de saciedad y proporcionando la energía necesaria para el día a día. Por otro lado, las proteínas, ya sean de origen animal o vegetal, son los bloques constructores esenciales para nuestros músculos, tejidos y órganos, además de ser fundamentales para la reparación y regeneración celular. La combinación equilibrada de estos tres elementos no solo garantiza una experiencia culinaria satisfactoria, sino que también promueve un estilo de vida saludable y nutricionalmente completo.</p>
+                        <blockquote>Las verduras, los hidratos de carbono y las proteínas son elementos esenciales que convergen para crear la armonía en un plato perfecto. Las verduras, ricas en vitaminas, minerales y fibra, aportan frescura, color y vitalidad, además de contribuir a una digestión saludable. Los hidratos de carbono, como el arroz, la pasta o las patatas, son la fuente principal de energía, brindando esa sensación de saciedad y proporcionando la energía necesaria para el día a día. Por otro lado, las proteínas, ya sean de origen animal o vegetal, son los bloques constructores esenciales para nuestros músculos, tejidos y órganos, además de ser fundamentales para la reparación y regeneración celular. La combinación equilibrada de estos tres elementos no solo garantiza una experiencia culinaria satisfactoria, sino que también promueve un estilo de vida saludable y nutricionalmente completo.</blockquote>
                     </div>
                 </div>
             </div>

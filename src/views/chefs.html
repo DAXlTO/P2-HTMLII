@@ -1,18 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="../assets/styles/chefs.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" href="../assets/styles/views.scss"><!-- do not remove this line! -->
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
     <title>Chefs ganadores</title>
   </head>
   <body>
-    <include src="src/views/menu.html"></include>
-    <main>
-        <div class="container-fluid">
-            <h1>Mejores chefs</h1>
+    <include src="src/views/menu.html" locals='{ "chefs": "current", "blog": "", "apuntate": "" }'></include>
+    <main class="chefs">
+            <h1 class="titular-chefs">Mejores chefs</h1>
             <div class="participants-grid">
                 <div class="participant">
                     <img src="../assets/images/chef1.png" >
@@ -59,7 +58,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </main>
   </body>
 </html>
