@@ -8,25 +8,18 @@
  */
 
  @import "variables";
-
- /**
-  * Import npm dependencies
-  * see: https://v2.parceljs.org/features/module-resolution/
-  * see commented examples below
-  */
- 
- // @import "some-node-module";
- // @import "@some-company/some-node-module";
- 
+  
  /**
   * Import layouts
   * It's a best practice to use a different partial for each page
-  */
-  @import "layouts/chefs";
+  */ 
+ @import "layouts/chefs";
  @import "layouts/apuntarse";
  @import "layouts/blog";
+ @import "layouts/menu";
+ @import "layouts/footer";
 
- @import "bootstrap/scss/bootstrap.scss";
+ @import "bootstrap/scss/bootstrap";
  
  /**
   * Do NOT include anything else in this file!

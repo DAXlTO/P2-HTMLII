@@ -1,0 +1,63 @@
+@use "../variables";
+
+.footer {
+    display: flex;
+    align-items: center; 
+    width: 70%;
+    height: 150px;
+    margin: auto;
+    margin-top: 50px;
+    border-top: 1px solid variables.$secondary-color;
+    
+    &-home{
+      width: 15%;
+    }
+
+    &-pages {
+      width: 60%;
+    }
+
+    &-redes {
+      width: 25%;
+    }
+    
+    nav{
+      display: flex;
+      align-items: center; 
+      margin: auto;
+    }
+    
+    a {
+      margin-left: 50px;
+      font-weight: 700;
+      border-bottom: none;
+    }
+
+    a:hover { color: variables.$secondary-color; }
+
+    a.current { color: variables.$secondary-color; }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      font-size: 1rem;
+      text-transform: uppercase;
+      list-style-type: none;
+
+      li {
+        color: variables.$main-color;
+        content: "   ";
+
+        a { text-decoration: none; }
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+    img{
+        width: 60px;
+        margin: auto;
+    }
+}

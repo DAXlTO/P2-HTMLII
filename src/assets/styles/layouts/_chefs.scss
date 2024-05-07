@@ -1,49 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500|Lora:400,400i,700,700i');
-@import "menu";
-@import "bootstrap/scss/bootstrap";
+@use "../variables";
 
-.participants-grid {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around; 
-  width: 70%;
-  margin: 40px auto;
-}
-
-body { font-family: 'Roboto', sans-serif; }
 img{
   width: 100%;
   margin-top: 0;
 }
-.chefs { margin-top: 6vh; }
+
+
+
+.chefs { 
+  margin-top: 6vh; 
+  container-type: inline-size;
+
+  .participants-grid {
+    display: block;
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  @container (min-width: 600px) {
+    .participants-grid {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-around; 
+      width: 70%;
+      margin: 40px auto;
+    }
+  }
+
+  .participant {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 0;
+  }
+
+  @container (min-width: 600px) {
+    .participant {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      height: 500px;
+      margin: 10px;
+      margin-top: 0;
+    }
+  }
+
+}
 
 .titular-chefs {
-  font-weight: 450;
-  text-align: center;
   font-size: 42px;
-  color: #004ca7 !important;
+  font-weight: 450;
+  color: variables.$main-color !important;
+  text-align: center;
 }
 
-.participant {
-  width: 25%;
-  height: 500px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0;
-}
+
 
 .card-content{
-  margin-top: 20px;
   height: 20%;
+  margin-top: 20px;
 
   p { text-align: center; }
 
   h2 { 
-    color: #7cb7fd !important;
+    color: variables.$secondary-color !important;
     text-align: center;
   }
 }

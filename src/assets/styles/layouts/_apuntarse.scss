@@ -1,75 +1,55 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500|Lora:400,400i,700,700i');
-@import "menu";
-@import "bootstrap/scss/bootstrap.scss";
+@use "../variables";
 
 $theme-colors: (
- "primary": #004ca7 // pon el código de color que prefieras
+ "primary": variables.$main-color,
+ "secondary": variables.$secondary-color
 );
-:root {
-  --main-color: color(display-p3 0 0.2314 0.2902);
-  --accent-color: color(display-p3 0.7490 0.0471 0.9412);
-  --neutral-color: color(display-p3 0.8980 0.8824 0.9961);
-  --grey: color(display-p3 0.6196 0.6157 0.6706);
-  --bg-color: color(display-p3 0.9686 0.9686 0.9686);
-  --light-color: color(display-p3 1 1 1);
-  --sans-serif-font: 'Lato', sans-serif;
-  --serif-font: 'Noto Serif', serif;
-}
 
-
-body { font-family: 'Roboto', sans-serif; }
-
-.form { width: 100vw; }
-form>div { margin-bottom: 1rem; }
 label:not(input[type="checkbox"]+label) {
   display: block;
   padding-bottom: .5rem;
   font-size: 1rem;
 }
+
 input:not([type="checkbox"]) {
   width: 18vw;
   padding: .5rem;
-  border: 1px solid var(--neutral-color);
-  border-radius: 5px;
   font-size: 1rem;
-  font-family: var(--sans-serif-font);
+  border: 1px solid variables.$secondary-color;
+  border-radius: 5px;
 }
+
+form>div { margin-bottom: 1rem; }
+
+.form { width: 100vw; }
 
 .info-legal,
 label[for="politica"] {
   font-size: .75rem;
 }
-.button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: .5rem .8rem;
-  background-color: var(--main-color);
-  color: var(--light-color);
-  font-family: var(--sans-serif-font);
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 4px;
-}
-.button:hover {
-  background-color: var(--accent-color);
-  color: white;
-}
 
-.formulario {
-  width: 30vw;
-  margin: 70px auto;
-
-  h1 {
-    text-align: center;
-    color: #004ca7;
+main {
+  container-type: inline-size;
+  .formulario {
+    width: 100%;
+    margin: auto;
+    margin-top: 70px;
+    container-type: inline-size;
+  
+  
+      h1 {
+        color: variables.$main-color;
+        text-align: center;
+      }
+      form {
+        width: 18vw;
+        margin: 40px auto;
+      }
   }
-
-  form {
-    width: 18vw;
-    margin: 40px auto;
+  @container (min-width: 900px) {
+    .formulario {
+      width: 30vw;
+    }
   }
 }
+
